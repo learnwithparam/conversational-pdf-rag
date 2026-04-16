@@ -1,0 +1,12 @@
+services:
+  app:
+    build: .
+    container_name: conversational-pdf-rag
+    volumes:
+      - .:/app
+      - /app/.venv
+    env_file:
+      - .env
+    restart: "no"
+    stdin_open: true
+    tty: true
